@@ -4,12 +4,12 @@
 	ELEMENT.closest = ELEMENT.closest || function closest(selector) {
 		var element = this;
 
-		while (element) {
+		while (element && element instanceof Element) {
 			if (element.matches(selector)) {
 				break;
 			}
 
-			element = element.parentElement;
+			element = element.parentNode;
 		}
 
 		return element;
