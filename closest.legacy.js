@@ -23,6 +23,8 @@
 			element = element.parentNode;
 		}
 
-		return element;
+		if (element !== document) {
+			return element;
+		}
 	};
 }(Element.prototype));
