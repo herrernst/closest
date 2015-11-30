@@ -13,6 +13,8 @@
 		}
 		if (element !== document) {
 			return element;
+		} else {
+			return null;
 		}
 	};
 }(Element.prototype));
