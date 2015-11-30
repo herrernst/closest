@@ -19,8 +19,8 @@
 			if (element.matches(selector)) {
 				break;
 			}
+			element.parentNode instanceof Element ? element = element.parentNode : element = null;
 
-			element = element.parentElement;
 		}
 
 		return element;
